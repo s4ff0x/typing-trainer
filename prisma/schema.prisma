@@ -57,6 +57,8 @@ model User {
     accounts      Account[]
     sessions      Session[]
     role          String    @default("user")
+    fragments     Fragment[]
+    categories    Category[]
 }
 
 model VerificationToken {
@@ -65,4 +67,24 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model Fragment {
+    id            Int      @id @default(autoincrement())
+    userId        String
+    user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+    text          String
+    name          String
+    createdAt     DateTime @default(now())
+    categoryId    Int
+    category      Category     @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+}
+
+model Category {
+    id            Int                 @id @default(autoincrement())
+    isShared      Boolean?  @default(false)
+    name          String
+    fragments     Fragment[]
+    userId        String
+    user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
