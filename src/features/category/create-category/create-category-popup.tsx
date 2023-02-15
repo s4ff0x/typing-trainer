@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Popup } from "@/src/ui-kit/popup";
+import { Popup } from "@/src/ui-kit";
 import { useCreateCategory } from "@/src/features/category/create-category/use-create-category";
 
 interface CreateCategoryPopupProps {

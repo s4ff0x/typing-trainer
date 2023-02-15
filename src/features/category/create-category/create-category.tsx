@@ -1,4 +1,4 @@
-import { useIsAuthed } from "@/src/features/user/lib";
+import { useIsAuthed } from "@/src/features/user";
 import Image from "next/image";
 import { useCallback, useState } from "react";
 import { CreateCategoryPopup } from "@/src/features/category/create-category/create-category-popup";

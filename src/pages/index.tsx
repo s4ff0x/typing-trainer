@@ -1,9 +1,9 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { Logo } from "../ui-kit/logo";
-import { UserWidget } from "@/src/features/user/user-widget";
-import { SelectCategory } from "@/src/features/category/select-category/select-category";
-import { CreateCategory } from "@/src/features/category/create-category/create-category";
+import { Logo } from "@/src/ui-kit";
+import { UserWidget } from "@/src/features/user";
+import { SelectCategory, CreateCategory } from "@/src/features/category";
+
 const Home: NextPage = () => {
   return (
     <>

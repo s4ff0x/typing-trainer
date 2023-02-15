@@ -1,6 +1,6 @@
 import { api } from "@/src/utils/api";
-import type { Option } from "@/src/ui-kit/select";
-import { Select } from "@/src/ui-kit/select";
+import type { Option } from "@/src/ui-kit";
+import { Select } from "@/src/ui-kit";
 import type { Category } from "@prisma/client";
 import { useState } from "react";
 
