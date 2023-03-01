@@ -1,7 +1,6 @@
 import { createTRPCRouter } from "./trpc";
 import { exampleRouter } from "./routers/example";
 import { categoryRouter } from "@/src/server/api/routers/category";
-import { fragmentRouter } from "@/src/server/api/routers/fragment";
 
 /**
  * This is the primary router for your server.
@@ -11,7 +10,6 @@ import { fragmentRouter } from "@/src/server/api/routers/fragment";
 export const appRouter = createTRPCRouter({
   example: exampleRouter,
   category: categoryRouter,
-  fragment: fragmentRouter,
 });
 
 // export ty  pe definition of API

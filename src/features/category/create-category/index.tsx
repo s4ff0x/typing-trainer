@@ -1,7 +1,7 @@
 import { useIsAuthed } from "@/src/features/user";
 import Image from "next/image";
 import { useCallback, useState } from "react";
-import { CreateCategoryPopup } from "@/src/features/category/create-category/create-category-popup";
+import { CategoryPopup } from "@/src/features/category/category-popup";
 
 export const CreateCategory = () => {
   const isAuthed = useIsAuthed();
@@ -23,7 +23,11 @@ export const CreateCategory = () => {
       >
         <Image src={"/img/add.svg"} alt={"add"} width={20} height={20} />
       </div>
-      <CreateCategoryPopup onClose={onClose} isOpened={isOpenedPopup} />
+      <CategoryPopup
+        onClose={onClose}
+        isOpened={isOpenedPopup}
+        categoryId={null}
+      />
     </div>
   );
 };
